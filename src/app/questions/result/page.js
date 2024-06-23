@@ -1,5 +1,4 @@
 "use client";
-import { Suspense } from "react";
 import { useQuiz } from "@/app/context/QuizContext";
 import Result from "@/components/Result";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -18,16 +17,14 @@ export default function ResultPage() {
     }
   }
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <div className="container mx-auto p-4 text-white flex gap-7 flex-col mt-10">
-        <h1 className="text-sm font-semibold text-gray-400 uppercase mb-4 text-center">
-          ĐÁNH GIÁ MỨC ĐỘ TRƯỞNG THÀNH <br />
-          VỀ QUẢN TRỊ TRẢI NGHIỆM KHÁCH HÀNG
-        </h1>
-        <div className="rounded-md p-4 w-full bg-[#395273]">
-          <Result level={level} />
-        </div>
+    <div className="container mx-auto p-4 text-white flex gap-7 flex-col mt-10">
+      <h1 className="text-sm font-semibold text-gray-400 uppercase mb-4 text-center">
+        ĐÁNH GIÁ MỨC ĐỘ TRƯỞNG THÀNH <br />
+        VỀ QUẢN TRỊ TRẢI NGHIỆM KHÁCH HÀNG
+      </h1>
+      <div className="rounded-md p-4 w-full bg-[#395273]">
+        <Result level={level} />
       </div>
-    </Suspense>
+    </div>
   );
 }
