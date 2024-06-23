@@ -21,16 +21,18 @@ export default function ResultPage() {
     <div>
       <Head>
         <title>Kết quả</title>
-        {/* Facebook Sharing */}
-        https://filum-ai-test.vercel.app${router.asPath}
         <meta
           property="og:url"
           content={`https://filum-ai-test.vercel.app${router.asPath}`}
         />
+        {/* https://filum-ai-test.vercel.app/questions/result?level=2 */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Kết quả" />
         <meta property="og:description" content="Kết quả của bạn" />
-        <meta property="og:image" content={`/thumbnails/level-${level}.png`} />
+        <meta
+          property="og:image"
+          content={`https://filum-ai-test.vercel.app/thumbnails/level_${level}.png`}
+        />
       </Head>
       <div className="container mx-auto p-4 text-white flex gap-7 flex-col mt-10">
         <h1 className="text-sm font-semibold text-gray-400 uppercase mb-4 text-center">
