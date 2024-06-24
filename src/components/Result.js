@@ -10,6 +10,8 @@ const Result = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const level = searchParams.get("level");
+  const domainName = "https://filum-ai-test.vercel.app";
+
   let result;
   useEffect(() => {
     if (selectedAnswers.length === 0) {
@@ -23,7 +25,8 @@ const Result = () => {
 
   useEffect(() => {
     if (result) {
-      setResultLink(`${pathname}?level=${result.level}`);
+      // setResultLink(`${pathname}?level=${result.level}`);
+      setResultLink(`${domainName}${pathname}?level=${result.level}`);
     }
   }, [result, pathname]);
 

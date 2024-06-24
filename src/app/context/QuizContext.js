@@ -8,6 +8,7 @@ export const useQuiz = () => useContext(QuizContext);
 export const QuizProvider = ({ children }) => {
   const [selectedAnswers, setSelectedAnswer] = useState([]);
   const [resultLink, setResultLink] = useState("");
+
   return (
     <QuizContext.Provider
       value={{ selectedAnswers, setSelectedAnswer, resultLink, setResultLink }}

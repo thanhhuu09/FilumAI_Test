@@ -8,11 +8,18 @@ export async function generateMetadata({ params, searchParams }) {
     description: " Result page for the survey app",
     openGraph: {
       url: `https://filum-ai-test.vercel.app/questions/result?level=${level}`,
-      title: "Result",
-      description: "Result for the survey app",
-      image: `thumbnails/level_${level}.png`,
+      title: "Kết quả",
+      description: "Kết quả khảo sát của tôi",
       type: "website",
       site_name: "Survey App",
+      images: [
+        {
+          url: `https://filum-ai-test.vercel.app/thumbnails/level_${level}.png`,
+          width: 1200,
+          height: 627,
+          alt: "Og Image Alt",
+        },
+      ],
     },
   };
 }
