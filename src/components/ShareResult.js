@@ -14,9 +14,7 @@ const ShareResult = () => {
     const facebookURL = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
     window.open(facebookURL, "_blank");
   };
-  const handleShareEmail = () => {
-    // Share to Email
-  };
+  const handleShareEmail = () => {};
   const handleCopyLink = () => {
     navigator.clipboard.writeText(resultLink);
     setIsCopied(true);
@@ -39,7 +37,10 @@ const ShareResult = () => {
       >
         Chia sẻ qua Facebook
       </button>
-      <button className="bg-blue-100 text-blue-600 p-2 rounded-md mt-2">
+      <button
+        onClick={handleShareEmail}
+        className="bg-blue-100 text-blue-600 p-2 rounded-md mt-2"
+      >
         Chia sẻ qua Email
       </button>
       <button

@@ -28,11 +28,11 @@ const HomePage = () => {
           type="text"
           placeholder="Địa chỉ email của bạn"
         />
-        <div className="flex items-center justify-center gap-2 bg-blue-600 p-2 rounded-md cursor-pointer w-full hover:bg-blue-700">
-          <button type="submit" onClick={handleStart}>
+        <div className="bg-blue-600 rounded-md cursor-pointer w-full hover:bg-blue-700">
+          <button type="submit" className="w-full p-2" onClick={handleStart}>
             Bắt đầu
+            <IoIosRocket color="white" className="inline-block ml-2" />
           </button>
-          <IoIosRocket color="white" />
         </div>
       </div>
     </div>

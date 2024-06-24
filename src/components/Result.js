@@ -25,7 +25,6 @@ const Result = () => {
 
   useEffect(() => {
     if (result) {
-      // setResultLink(`${pathname}?level=${result.level}`);
       setResultLink(`${domainName}${pathname}?level=${result.level}`);
     }
   }, [result, pathname]);

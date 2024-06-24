@@ -35,11 +35,14 @@ const Guide = () => {
               hay chưa
             </li>
           </ul>
-          <div className="flex items-center justify-center gap-2 bg-blue-600 p-2 rounded-md cursor-pointer w-full hover:bg-blue-700">
-            <button type="submit" onClick={handleStart}>
+          <div className="bg-blue-600 rounded-md cursor-pointer w-full hover:bg-blue-700">
+            <button type="submit" onClick={handleStart} className="w-full p-2">
               Bắt đầu
+              <IoIosArrowRoundForward
+                color="white"
+                className="inline-block ml-2"
+              />
             </button>
-            <IoIosArrowRoundForward />
           </div>
         </div>
       </div>
