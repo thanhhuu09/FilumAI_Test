@@ -1,27 +1,21 @@
 import Result from "@/components/Result";
 import Sidebar from "@/components/Sidebar";
 
-// export const metadata = {
-//   title: "Result",
-//   description: "Result page for the quiz app",
-// };
-// http://localhost:3000/questions/result?level=2
-// export async function generateMetadata({ params, searchParams }) {
-//   const level = searchParams.level;
-//   console.log("level", level);
-//   return {
-//     title: "Result",
-//     description: "Result page for the quiz app",
-//     openGraph: {
-//       title: "Result",
-//       description: "Result page for the quiz app",
-//       image: "URL_TO_YOUR_IMAGE",
-
-//       type: "website",
-//       site_name: "Your Site Name",
-//     },
-//   };
-// }
+export async function generateMetadata({ params, searchParams }) {
+  const level = searchParams?.level;
+  return {
+    title: "Result",
+    description: " Result page for the survey app",
+    openGraph: {
+      url: `https://filum-ai-test.vercel.app/questions/result?level=${level}`,
+      title: "Result",
+      description: "Result for the survey app",
+      image: `thumbnails/level_${level}.png`,
+      type: "website",
+      site_name: "Survey App",
+    },
+  };
+}
 export default function ResultPage() {
   return (
     <div>

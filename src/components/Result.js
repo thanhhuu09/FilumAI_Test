@@ -2,25 +2,35 @@
 import { useQuiz } from "@/app/context/QuizContext";
 import { data } from "@/app/data/data";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
 const Result = () => {
   const { selectedAnswers, setResultLink } = useQuiz();
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
-
   const level = searchParams.get("level");
-  if (selectedAnswers.length === 0) {
-    if (searchParams.has("level")) {
-      router.push(`/questions/result?level=${level}`);
-    } else {
-      return router.push("/");
-    }
-  }
-
   let result;
+  useEffect(() => {
+    if (selectedAnswers.length === 0) {
+      if (searchParams.has("level")) {
+        router.push(`/questions/result?level=${level}`);
+      } else {
+        return router.push("/");
+      }
+    }
+  }, [selectedAnswers, searchParams, router]);
+
+  useEffect(() => {
+    if (result) {
+      setResultLink(`${pathname}?level=${result.level}`);
+    }
+  }, [result, pathname]);
+
   if (level) {
     result = data.results.find((result) => result.level === parseInt(level));
+  } else if (selectedAnswers.length === 0) {
+    return null;
   } else {
     const totalScore = selectedAnswers.reduce(
       (acc, curr) => acc + curr.answer.score,
@@ -30,11 +40,8 @@ const Result = () => {
     result = data.results.find(
       (result) => totalScore > result.range[0] && totalScore < result.range[1]
     );
-
-    setResultLink(`${pathname}?level=${result.level}`);
   }
-  // console.log({ result });
-  // console.log({ totalScore });
+
   return (
     <div className="text-white">
       <div className="flex items-center gap-4 flex-row">

@@ -2,10 +2,12 @@
 import { useQuiz } from "@/app/context/QuizContext";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+
 const ShareResult = () => {
   const router = useRouter();
   const { resultLink } = useQuiz();
   const [isCopied, setIsCopied] = useState(false);
+  const domainName = "https://filum-ai-test.vercel.app";
   const handleShareFacebook = () => {
     // Share to Facebook
     const shareUrl = encodeURIComponent(resultLink);
