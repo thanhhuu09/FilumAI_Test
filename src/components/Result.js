@@ -2,17 +2,18 @@
 import { useQuiz } from "@/app/context/QuizContext";
 import { data } from "@/app/data/data";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import GaugeChartComponent from "./GaugeChart";
 
 const Result = () => {
-  const { selectedAnswers, setResultLink } = useQuiz();
+  const { selectedAnswers, setResultLink, resultLink } = useQuiz();
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
   const level = searchParams.get("level");
   const domainName = "https://filum-ai-test.vercel.app";
-
   let result;
+
   useEffect(() => {
     if (selectedAnswers.length === 0) {
       if (searchParams.has("level")) {
@@ -38,10 +39,10 @@ const Result = () => {
       (acc, curr) => acc + curr.answer.score,
       0
     );
-
     result = data.results.find(
       (result) => totalScore > result.range[0] && totalScore < result.range[1]
     );
+    console.log({ totalScore, result });
   }
 
   return (
@@ -61,6 +62,19 @@ const Result = () => {
       {/* Description */}
       <div className="mt-4">
         <p className="text-base text-gray-300">{result.description.text}</p>
+      </div>
+      {/* Gauge chart   */}
+      <div className="flex items-center justify-center mt-4 w-full h-[300px]">
+        <GaugeChartComponent
+          percent={
+            selectedAnswers
+              ? selectedAnswers.reduce(
+                  (acc, curr) => acc + curr.answer.score,
+                  0
+                )
+              : 0
+          }
+        />
       </div>
     </div>
   );

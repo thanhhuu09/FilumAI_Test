@@ -1,79 +1,24 @@
-import React from "react";
-import { PieChart, Pie, Cell, Sector } from "recharts";
+"use client";
+import { useQuiz } from "@/app/context/QuizContext";
+import GaugeChart from "react-gauge-chart";
 
-const GaugeChart = ({ value, maxValue }) => {
-  const data = [
-    { name: "Value", value: value },
-    { name: "Rest", value: maxValue - value },
-  ];
-
-  const renderActiveShape = (props) => {
-    const { cx, cy, innerRadius, outerRadius, startAngle, endAngle, fill } =
-      props;
-
-    return (
-      <g>
-        <Sector
-          cx={cx}
-          cy={cy}
-          innerRadius={innerRadius}
-          outerRadius={outerRadius}
-          startAngle={startAngle}
-          endAngle={endAngle}
-          fill={fill}
-        />
-      </g>
-    );
-  };
-
-  const renderCustomizedLabels = ({
-    cx,
-    cy,
-    midAngle,
-    innerRadius,
-    outerRadius,
-    index,
-    payload,
-  }) => {
-    const RADIAN = Math.PI / 180;
-    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-    const x = cx + radius * Math.cos(-midAngle * RADIAN);
-    const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-    return (
-      <text
-        x={x}
-        y={y}
-        fill="white"
-        textAnchor={x > cx ? "start" : "end"}
-        dominantBaseline="central"
-      >
-        {payload[index].name}
-      </text>
-    );
-  };
-
+const GaugeChartComponent = ({ percent }) => {
   return (
-    <PieChart width={200} height={100}>
-      <Pie
-        data={data}
-        cx={100}
-        cy={100}
-        startAngle={180}
-        endAngle={0}
-        innerRadius={60}
-        outerRadius={80}
-        fill="#8884d8"
-        paddingAngle={0}
-        dataKey="value"
-        activeIndex={0}
-        activeShape={renderActiveShape}
-      >
-        <Cell key={`cell-0`} fill="#FFBB10" stroke="#FFBB10" />
-        <Cell key={`cell-1`} fill="#6180A1" stroke="#6180A1" />
-      </Pie>
-    </PieChart>
+    <div>
+      <GaugeChart
+        id="gauge-chart2"
+        nrOfLevels={30}
+        arcsLength={[0.2, 0.2, 0.2, 0.2, 0.2]}
+        colors={["#FF5F5F", "#FFC371", "#FFFF00", "#00E676", "#00B0FF"]}
+        percent={percent / 100}
+        arcPadding={0.0}
+        cornerRadius={0}
+        needleColor="#FFDD00"
+        needleBaseColor="#888888"
+        textColor="#FFFFFF"
+      />
+    </div>
   );
 };
 
-export default GaugeChart;
+export default GaugeChartComponent;

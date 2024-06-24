@@ -46,182 +46,182 @@ export const data = {
         },
       ],
     },
-    // {
-    //   id: 3,
-    //   title:
-    //     "Có một nhóm chuyên trách về việc thu thập, phân tích nguyên nhân gốc rễ vấn đề của khách hàng và truyền thông về phản hồi của khách hàng đến quản lý và ban lãnh đạo cấp cao.",
-    //   options: [
-    //     {
-    //       id: 1,
-    //       text: "Có",
-    //       score: 1,
-    //     },
-    //     {
-    //       id: 2,
-    //       text: "Không",
-    //       score: 0,
-    //     },
-    //     {
-    //       id: 3,
-    //       text: "Không rõ vấn đề này",
-    //       score: 0.5,
-    //     },
-    //   ],
-    // },
-    // {
-    //   id: 4,
-    //   title:
-    //     "Có một vài cuộc khảo sát được thiết kế thống nhất cho một số điểm chạm theo hành trình mua hàng và vòng đời của khách hàng.",
-    //   options: [
-    //     {
-    //       id: 1,
-    //       text: "Có",
-    //       score: 1,
-    //     },
-    //     {
-    //       id: 2,
-    //       text: "Không",
-    //       score: 0,
-    //     },
-    //     {
-    //       id: 3,
-    //       text: "Không rõ vấn đề này",
-    //       score: 0.5,
-    //     },
-    //   ],
-    // },
-    // {
-    //   id: 5,
-    //   title:
-    //     "Các thông báo được gửi đến khách hàng đều được cá nhân hoá bao gồm cả về tình trạng của khiếu nại/phản hồi của họ, thông qua hệ thống quản lý thông tin khách hàng hoặc hệ thống xử lý khiếu nại tự động.",
-    //   options: [
-    //     {
-    //       id: 1,
-    //       text: "Có",
-    //       score: 1,
-    //     },
-    //     {
-    //       id: 2,
-    //       text: "Không",
-    //       score: 0,
-    //     },
-    //     {
-    //       id: 3,
-    //       text: "Không rõ vấn đề này",
-    //       score: 0.5,
-    //     },
-    //   ],
-    // },
-    // {
-    //   id: 6,
-    //   title:
-    //     "Phản hồi trực tiếp (ví dụ: khảo sát), gián tiếp (ví dụ: mạng xã hội) và suy đoán (ví dụ: tần suất đặt hàng) được hợp nhất để cung cấp một góc nhìn chung về trải nghiệm tại mỗi giai đoạn của vòng đời khách hàng.",
-    //   options: [
-    //     {
-    //       id: 1,
-    //       text: "Có",
-    //       score: 1,
-    //     },
-    //     {
-    //       id: 2,
-    //       text: "Không",
-    //       score: 0,
-    //     },
-    //     {
-    //       id: 3,
-    //       text: "Không rõ vấn đề này",
-    //       score: 0.5,
-    //     },
-    //   ],
-    // },
-    // {
-    //   id: 7,
-    //   title:
-    //     "Đã hoàn thiện năng lực về phản hồi khách hàng (VoC) tiêu chuẩn - và được hỗ trợ bởi một nền tảng VoC duy nhất, được sử dụng để phối hợp các hoạt động phản hồi khách hàng trên toàn doanh nghiệp.",
-    //   options: [
-    //     {
-    //       id: 1,
-    //       text: "Có",
-    //       score: 1,
-    //     },
-    //     {
-    //       id: 2,
-    //       text: "Không",
-    //       score: 0,
-    //     },
-    //     {
-    //       id: 3,
-    //       text: "Không rõ vấn đề này",
-    //       score: 0.5,
-    //     },
-    //   ],
-    // },
-    // {
-    //   id: 8,
-    //   title:
-    //     "Phản hồi của khách hàng được phân loại thông qua các quy trình của từng phòng ban cụ thể. Thông tin về phản hồi của khách hàng và dự đoán hành vi của khách hàng được chuyển giao cho các nhân sự liên quan trên toàn tổ chức.",
-    //   options: [
-    //     {
-    //       id: 1,
-    //       text: "Có",
-    //       score: 1,
-    //     },
-    //     {
-    //       id: 2,
-    //       text: "Không",
-    //       score: 0,
-    //     },
-    //     {
-    //       id: 3,
-    //       text: "Không rõ vấn đề này",
-    //       score: 0.5,
-    //     },
-    //   ],
-    // },
-    // {
-    //   id: 9,
-    //   title:
-    //     "Phản hồi của khách hàng (VoC) được định lượng bằng cách liên kết chặt chẽ với các hành động cụ thể của khách hàng như tần suất mua hàng, giá trị đơn hàng.",
-    //   options: [
-    //     {
-    //       id: 1,
-    //       text: "Có",
-    //       score: 1,
-    //     },
-    //     {
-    //       id: 2,
-    //       text: "Không",
-    //       score: 0,
-    //     },
-    //     {
-    //       id: 3,
-    //       text: "Không rõ vấn đề này",
-    //       score: 0.5,
-    //     },
-    //   ],
-    // },
-    // {
-    //   id: 10,
-    //   title:
-    //     "Trải nghiệm của nhân viên và đánh giá của nhân viên được cân nhắc thành yếu tố để cải thiện trải nghiệm khách hàng.",
-    //   options: [
-    //     {
-    //       id: 1,
-    //       text: "Có",
-    //       score: 1,
-    //     },
-    //     {
-    //       id: 2,
-    //       text: "Không",
-    //       score: 0,
-    //     },
-    //     {
-    //       id: 3,
-    //       text: "Không rõ vấn đề này",
-    //       score: 0.5,
-    //     },
-    //   ],
-    // },
+    {
+      id: 3,
+      title:
+        "Có một nhóm chuyên trách về việc thu thập, phân tích nguyên nhân gốc rễ vấn đề của khách hàng và truyền thông về phản hồi của khách hàng đến quản lý và ban lãnh đạo cấp cao.",
+      options: [
+        {
+          id: 1,
+          text: "Có",
+          score: 1,
+        },
+        {
+          id: 2,
+          text: "Không",
+          score: 0,
+        },
+        {
+          id: 3,
+          text: "Không rõ vấn đề này",
+          score: 0.5,
+        },
+      ],
+    },
+    {
+      id: 4,
+      title:
+        "Có một vài cuộc khảo sát được thiết kế thống nhất cho một số điểm chạm theo hành trình mua hàng và vòng đời của khách hàng.",
+      options: [
+        {
+          id: 1,
+          text: "Có",
+          score: 1,
+        },
+        {
+          id: 2,
+          text: "Không",
+          score: 0,
+        },
+        {
+          id: 3,
+          text: "Không rõ vấn đề này",
+          score: 0.5,
+        },
+      ],
+    },
+    {
+      id: 5,
+      title:
+        "Các thông báo được gửi đến khách hàng đều được cá nhân hoá bao gồm cả về tình trạng của khiếu nại/phản hồi của họ, thông qua hệ thống quản lý thông tin khách hàng hoặc hệ thống xử lý khiếu nại tự động.",
+      options: [
+        {
+          id: 1,
+          text: "Có",
+          score: 1,
+        },
+        {
+          id: 2,
+          text: "Không",
+          score: 0,
+        },
+        {
+          id: 3,
+          text: "Không rõ vấn đề này",
+          score: 0.5,
+        },
+      ],
+    },
+    {
+      id: 6,
+      title:
+        "Phản hồi trực tiếp (ví dụ: khảo sát), gián tiếp (ví dụ: mạng xã hội) và suy đoán (ví dụ: tần suất đặt hàng) được hợp nhất để cung cấp một góc nhìn chung về trải nghiệm tại mỗi giai đoạn của vòng đời khách hàng.",
+      options: [
+        {
+          id: 1,
+          text: "Có",
+          score: 1,
+        },
+        {
+          id: 2,
+          text: "Không",
+          score: 0,
+        },
+        {
+          id: 3,
+          text: "Không rõ vấn đề này",
+          score: 0.5,
+        },
+      ],
+    },
+    {
+      id: 7,
+      title:
+        "Đã hoàn thiện năng lực về phản hồi khách hàng (VoC) tiêu chuẩn - và được hỗ trợ bởi một nền tảng VoC duy nhất, được sử dụng để phối hợp các hoạt động phản hồi khách hàng trên toàn doanh nghiệp.",
+      options: [
+        {
+          id: 1,
+          text: "Có",
+          score: 1,
+        },
+        {
+          id: 2,
+          text: "Không",
+          score: 0,
+        },
+        {
+          id: 3,
+          text: "Không rõ vấn đề này",
+          score: 0.5,
+        },
+      ],
+    },
+    {
+      id: 8,
+      title:
+        "Phản hồi của khách hàng được phân loại thông qua các quy trình của từng phòng ban cụ thể. Thông tin về phản hồi của khách hàng và dự đoán hành vi của khách hàng được chuyển giao cho các nhân sự liên quan trên toàn tổ chức.",
+      options: [
+        {
+          id: 1,
+          text: "Có",
+          score: 1,
+        },
+        {
+          id: 2,
+          text: "Không",
+          score: 0,
+        },
+        {
+          id: 3,
+          text: "Không rõ vấn đề này",
+          score: 0.5,
+        },
+      ],
+    },
+    {
+      id: 9,
+      title:
+        "Phản hồi của khách hàng (VoC) được định lượng bằng cách liên kết chặt chẽ với các hành động cụ thể của khách hàng như tần suất mua hàng, giá trị đơn hàng.",
+      options: [
+        {
+          id: 1,
+          text: "Có",
+          score: 1,
+        },
+        {
+          id: 2,
+          text: "Không",
+          score: 0,
+        },
+        {
+          id: 3,
+          text: "Không rõ vấn đề này",
+          score: 0.5,
+        },
+      ],
+    },
+    {
+      id: 10,
+      title:
+        "Trải nghiệm của nhân viên và đánh giá của nhân viên được cân nhắc thành yếu tố để cải thiện trải nghiệm khách hàng.",
+      options: [
+        {
+          id: 1,
+          text: "Có",
+          score: 1,
+        },
+        {
+          id: 2,
+          text: "Không",
+          score: 0,
+        },
+        {
+          id: 3,
+          text: "Không rõ vấn đề này",
+          score: 0.5,
+        },
+      ],
+    },
   ],
   results: [
     {
