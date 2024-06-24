@@ -49,13 +49,17 @@ const Result = () => {
     <div className="text-white">
       <div className="flex items-center gap-4 flex-row">
         <div className="bg-white p-4 rounded-full w-16 h-16 flex items-center justify-center">
-          <img src={result.icon} alt={result.name} className="w-full h-full" />
+          <img
+            src={result?.icon}
+            alt={result?.name}
+            className="w-full h-full"
+          />
         </div>
         <div className="flex flex-col gap-2">
           <h1 className="text-sm uppercase font-medium">
-            Voice of customers - cấp độ {result.level}
+            Voice of customers - cấp độ {result?.level}
           </h1>
-          <h2 className="text-2xl font-bold uppercase ">{result.name}</h2>
+          <h2 className="text-2xl font-bold uppercase ">{result?.name}</h2>
         </div>
       </div>
 
